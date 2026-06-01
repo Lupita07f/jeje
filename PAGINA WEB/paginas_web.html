@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páginas Web | Evidencias</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <img src="Assets/logo.png" alt="Logo de la Institución" class="school-logo">
+            <p class="institution-name">Colegio de Bachilleres del Estado de México Plantel 40
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="index.html" class="back-btn">&larr; Volver al Inicio</a>
+            <span class="current-module">Módulo: Programación de Páginas Web</span>
+        </div>
+    </nav>
+
+    <section class="web-intro">
+        <span class="project-tag">Proyecto Integrador</span>
+        <h1>Pokédex Preparatoria</h1>
+        <p class="project-summary">
+            Desarrollo acumulativo de una aplicación web interactiva que conecta con servidores externos en tiempo real. Un proyecto que unifica la maquetación estructural, el diseño responsivo avanzado y la programación asíncrona.
+        </p>
+    </section>
+
+    <main class="web-project-container">
+        
+        <div class="section-divider">
+            <h2>1. Entorno de Desarrollo (Sublime Text)</h2>
+        </div>
+
+        <section class="project-phase-card">
+            <div class="phase-meta">
+                <span class="phase-number">Fase 01</span>
+                <h2>Estructura y maquetación responsiva</h2>
+            </div>
+            <div class="phase-grid">
+                <div class="phase-text">
+                    <p style="text-align: justify;">
+                        Se utilizó el entorno de desarrollo <strong>Sublime Text</strong> para construir los cimientos del ecosistema web mediante el archivo <code>index.html</code>. Se definió un contenedor semántico principal (<code>&lt;main id="pokedex-container"&gt;</code>) y una barra superior destinada al motor de búsqueda de los Pokémon mediante un elemento de entrada de texto.
+                    </p>
+                    <p style="text-align: justify;">
+                        Posteriorments, mediante la hoja de estilos <code>style.css</code>, se implementó el modelo de maquetación <strong>CSS Grid</strong> en la clase <code>.pokedex</code>. Utilizando la propiedad <code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code>, se logró que la interfaz fuera completamente responsiva y adaptable a cualquier resolución de pantalla de manera automática.
+                    </p>
+                </div>
+                <div class="phase-media">
+                    <div class="code-screenshot">
+                        <img src="Assets/PAGINAS WEB/SUBLIME TEXT/index.png" alt="Captura de Código index.html">
+                        <span class="screenshot-caption">Evidencia: Estructura semántica en index.html</span>
+                    </div>
+                    <div class="code-screenshot">
+                        <img src="Assets/PAGINAS WEB/SUBLIME TEXT/style.png" alt="Captura de Código style.css">
+                        <span class="screenshot-caption">Evidencia: Reglas de CSS Grid en style.css</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-phase-card">
+            <div class="phase-meta">
+                <span class="phase-number">Fase 02</span>
+                <h2>Lógica con Arreglos y Renderizado Dinámico</h2>
+            </div>
+            <div class="phase-grid solo-media">
+                <div class="phase-text">
+                    <p style="text-align: justify;">
+                        Con la estructura visual lista, se inicializó el comportamiento dinámico programando el script <code>app.js</code>. Para asentar las bases del manejo de datos, se estructuró un arreglo de objetos local llamado <code>pokemonsPrueba</code> que contenía información inicial estática (Bulbasaur, Charmander y Squirtle).
+                    </p>
+                    <p style="text-align: justify;">
+                        Haciendo uso del método <code>forEach</code> y de los <strong>Template Literals</strong>, se creó la función <code>crearTarjetaHTML(pokemon)</code>. Esta rutina inyecta de forma automatizada las etiquetas, imágenes oficiales desde los repositorios y clases de tipos directamente en el DOM, optimizando la escalabilidad del sitio.
+                    </p>
+                </div>
+                <div class="phase-media">
+                    <div class="code-screenshot">
+                        <img src="Assets/PAGINAS WEB/SUBLIME TEXT/app.png" alt="Captura de Código app.js">
+                        <span class="screenshot-caption">Evidencia: Ciclos e inyección dinámica con app.js</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider">
+            <h2>2. Control de Versiones y Hosting (GitHub)</h2>
+        </div>
+
+        <section class="project-phase-card alt-layout">
+            <div class="phase-meta">
+                <span class="phase-number">Fase 03</span>
+                <h2>Despliegue e interfaz final de la Pokédex</h2>
+            </div>
+            <div class="phase-grid">
+                <div class="phase-text">
+                    <p style="text-align: justify;">
+                        El ciclo completo del software concluyó con la migración del código desde el entorno local hacia la nube. Los archivos fuentes fueron cargados en un repositorio público en <strong>GitHub</strong> bajo el control de versiones. 
+                    </p>
+                    <p style="text-align: justify;">
+                        Posteriormente, se configuró la herramienta nativa <strong>GitHub Pages</strong> desde el menú de <em>Settings</em> de la plataforma, permitiendo compilar y desplegar los archivos estáticos de forma gratuita para generar un enlace URL web totalmente público y funcional en internet.
+                    </p>
+                </div>
+                <div class="phase-media">
+                    <div class="code-screenshot">
+                        <img src="Assets/PAGINAS WEB/GITHUB/GitHub.jpeg" alt="Configuración de GitHub Pages">
+                        <span class="screenshot-caption">Evidencia: Ajustes de hosting en GitHub Pages</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-phase-card">
+            <div class="phase-meta">
+                <span class="phase-number">Fase 04</span>
+                <h2>Demostración del producto publicado</h2>
+            </div>
+            <div class="phase-media-row">
+                <div class="code-screenshot row-item">
+                    <img src="Assets/PAGINAS WEB/GITHUB/Pokedex.png" alt="Render de la Pokédex completa">
+                    <span class="screenshot-caption">Vista Completa: Renderizado dinámico de tarjetas Pokémon</span>
+                </div>
+                <div class="code-screenshot row-item">
+                    <img src="Assets/PAGINAS WEB/GITHUB/url.jpeg" alt="Pokédex funcionando en el navegador con URL">
+                    <span class="screenshot-caption">Entorno de Producción: Aplicación ejecutándose bajo la URL pública de GitHub</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Guadalupe Nicolás Cayetano. Todos los derechos reservados.</p>
+        <p>Diseño Digital &amp; Páginas Web | Plantel COBAEM</p>
+    </footer>
+
+</body>
+</html>

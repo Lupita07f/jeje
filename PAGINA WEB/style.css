@@ -1,0 +1,855 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y VARIABLES (REDiseño Pastel Femenino)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
+
+:root {
+    /* Paleta de Colores Pasteles Femeninos */
+    --bg-main: #fffbfc;          /* Fondo principal: Blanco con un sutil toque de rubor rosa */
+    --bg-card: #ffffff;          /* Fondo de tarjetas: Blanco puro para máximo contraste y limpieza */
+    --bg-card-hover: #fff5f6;    /* Fondo interactivo muy suave */
+    
+    /* Colores de Acento y Primarios */
+    --primary: #ff8fa3;          /* Rosa pastel elegante y romántico */
+    --primary-light: #ffb3c1;    /* Rosa pastel suave para hovers y detalles */
+    --primary-dark: #ff4d6d;     /* Rosa vibrante para enlaces y textos destacados */
+    
+    /* Colores Secundarios Pastel */
+    --accent: #c3ecf6;           /* Azul cielo pastel / Turquesa sutil */
+    --accent-lilac: #e8dbfc;     /* Lila mágico pastel */
+    --accent-peach: #ffe5d9;     /* Durazno pastel cálido */
+    --accent-sage: #d8f3dc;      /* Verde menta/sabio pastel */
+    
+    /* Textos (Evitamos el negro puro para mantener la suavidad) */
+    --text-main: #4a3e40;        /* Marrón grisáceo oscuro, cálido y elegante */
+    --text-muted: #8a787a;       /* Marrón grisáceo medio para textos secundarios */
+    
+    /* Bordes y Sombras */
+    --border-color: #fbe3e5;     /* Bordes rosa pastel ultra suaves */
+    --shadow-soft: 0 10px 30px rgba(255, 143, 163, 0.06), 0 2px 10px rgba(0, 0, 0, 0.01);
+    --shadow-hover: 0 20px 40px rgba(255, 143, 163, 0.12), 0 5px 15px rgba(255, 143, 163, 0.03);
+    
+    /* Tipografías */
+    --font-family: 'Poppins', sans-serif;
+    --font-heading: 'Playfair Display', serif; /* Toque editorial y chic para títulos */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   ENCABEZADO (LOGO)
+   ========================================== */
+.main-header {
+    background-color: rgba(255, 252, 253, 0.92);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 25px rgba(255, 143, 163, 0.03);
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.school-logo {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+    /* Sombra suave y rosada en lugar de negra */
+    filter: drop-shadow(0px 6px 12px rgba(255, 143, 163, 0.2));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.school-logo:hover {
+    transform: scale(1.08) rotate(2deg);
+}
+
+.institution-name {
+    font-family: var(--font-family);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--primary-dark);
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================
+   SECCIÓN HERO (BIENVENIDA)
+   ========================================== */
+.hero-section {
+    max-width: 850px;
+    margin: 5rem auto 3rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.badge {
+    background-color: var(--accent-peach);
+    color: var(--primary-dark);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 143, 163, 0.2);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(255, 143, 163, 0.05);
+}
+
+.hero-section h1 {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+    /* Efecto degradado elegante */
+    background: linear-gradient(135deg, #4a3e40 30%, var(--primary-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.student-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+    background: var(--bg-card);
+    padding: 1rem 2.5rem;
+    border-radius: 50px; /* Bordes completamente redondeados estilo píldora */
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.student-info strong {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.hero-description {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   MÓDULOS / TARJETAS (GRID)
+   ========================================== */
+.modules-section {
+    max-width: 1100px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--text-main);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent-lilac));
+    margin: 0.75rem auto 0 auto;
+    border-radius: 10px;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.module-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px; /* Bordes más suaves y redondos */
+    padding: 2.5rem;
+    text-decoration: none;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de línea brillante arriba de la tarjeta con gradiente pastel */
+.module-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary), var(--accent-lilac), var(--accent));
+    opacity: 0.4; /* Siempre visible de forma sutil */
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-light);
+}
+
+.module-card:hover::before {
+    opacity: 1;
+    height: 8px;
+}
+
+.card-icon {
+    color: var(--primary-dark);
+    background: rgba(255, 143, 163, 0.08);
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px; /* Soft squircle */
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.module-card:hover .card-icon {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary), var(--accent-lilac));
+    transform: scale(1.1) rotate(5deg);
+}
+
+.module-card h3 {
+    font-family: var(--font-family);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.module-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.card-link {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.card-link::after {
+    content: '→';
+    transition: transform 0.3s ease;
+}
+
+.module-card:hover .card-link {
+    color: var(--primary-dark);
+}
+
+.module-card:hover .card-link::after {
+    transform: translateX(6px);
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+   ========================================== */
+.main-footer {
+    background-color: #fff5f6; /* Fondo rosa pastel sumamente sutil */
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-top: 8rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+}
+
+.main-footer p:first-child {
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* ==========================================
+   RESPONSIVO GENERAL
+   ========================================== */
+@media (max-width: 600px) {
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    .student-info {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.2rem;
+        border-radius: 24px;
+    }
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   ESTILOS ADICIONALES PARA LA GALERÍA (DISEÑO)
+   ========================================================================== */
+.nav-bar {
+    background-color: var(--bg-card);
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 15px rgba(255, 143, 163, 0.02);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-btn::before {
+    content: '←';
+}
+
+.back-btn:hover {
+    color: var(--primary-dark);
+    transform: translateX(-4px);
+}
+
+.current-module {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+    background-color: var(--bg-card-hover);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+}
+
+.gallery-intro {
+    max-width: 900px;
+    margin: 4rem auto 3rem auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.gallery-intro h1 {
+    font-family: var(--font-heading);
+    font-size: 2.6rem;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, var(--text-main) 40%, var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gallery-intro p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* El contenedor Grid de la Galería */
+.gallery-section {
+    max-width: 1200px;
+    margin: 0 auto 6rem auto;
+    padding: 0 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 3rem;
+}
+
+/* Tarjeta de la Práctica */
+.gallery-card {
+    background-color: var(--bg-card);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-light);
+}
+
+/* Contenedor de la Imagen */
+.image-container {
+    background-color: #fff9fa; /* Fondo rosa pastel sumamente claro y limpio para resaltar PNGs */
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.image-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, transparent 60%, rgba(255, 245, 246, 0.6) 100%);
+    pointer-events: none;
+}
+
+.image-container img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-card:hover .image-container img {
+    transform: scale(1.06) rotate(1deg);
+}
+
+/* Contenido de Texto */
+.card-content {
+    padding: 2.25rem;
+}
+
+.card-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary);
+    padding-left: 0.75rem;
+}
+
+.card-content p {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.card-content ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.card-content ul li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+/* Viñeta personalizada con un corazón pastel o punto estilizado */
+.card-content ul li::before {
+    content: '♥';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .card-content ul li::before {
+    transform: scale(1.2);
+    color: var(--primary-dark);
+}
+
+/* Responsivo para pantallas chicas */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .image-container {
+        height: 220px;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   ESTILOS ADICIONALES PARA PÁGINAS WEB (POKÉDEX / PROYECTOS)
+   ========================================================================== */
+.web-intro {
+    max-width: 850px;
+    margin: 5rem auto 3.5rem auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.project-tag {
+    background-color: var(--accent-lilac);
+    color: #6a40a4; /* Lila oscuro para legibilidad */
+    padding: 0.4rem 1.1rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(232, 219, 252, 0.6);
+    display: inline-block;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 8px rgba(232, 219, 252, 0.2);
+}
+
+.web-intro h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, var(--text-main) 30%, var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-summary {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Contenedor del proyecto */
+.web-project-container {
+    max-width: 1000px;
+    margin: 0 auto 6rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Tarjetas de Fases */
+.project-phase-card {
+    background-color: var(--bg-card);
+    border-radius: 24px;
+    padding: 3rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-phase-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.phase-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.25rem;
+}
+
+.phase-number {
+    background-color: var(--accent-peach);
+    color: var(--primary-dark);
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 143, 163, 0.15);
+}
+
+.phase-meta h2 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--text-main);
+}
+
+/* Grid de contenido interno de las fases */
+.phase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.phase-grid.solo-media {
+    grid-template-columns: 1.2fr 0.8fr;
+}
+
+.phase-text p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
+.phase-text code {
+    background-color: var(--bg-main);
+    color: var(--primary-dark);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+}
+
+/* Estilos de las Capturas de Código */
+.phase-media {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.code-screenshot {
+    background-color: #ffffff;
+    padding: 0.8rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(255, 143, 163, 0.05);
+    position: relative;
+    /* Efecto ventana de Mac sutil */
+    padding-top: 2.2rem;
+}
+
+/* Botones de ventana simulados para un diseño ultra-premium */
+.code-screenshot::before {
+    content: '';
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff5f56;
+    box-shadow: 14px 0 0 #ffbd2e, 28px 0 0 #27c93f;
+}
+
+.code-screenshot img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.screenshot-caption {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 0.75rem;
+    font-style: italic;
+}
+
+/* Contenido de Fase Completa */
+.phase-full-content .text-block h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    font-size: 1.35rem;
+    margin-bottom: 0.85rem;
+}
+
+.phase-full-content .text-block p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.interactivity-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.feature-item {
+    background-color: var(--bg-main);
+    padding: 1.75rem;
+    border-radius: 16px;
+    border-left: 4px solid var(--primary);
+    border: 1px solid var(--border-color);
+    border-left-width: 4px;
+    box-shadow: 0 4px 15px rgba(255, 143, 163, 0.02);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+    border-left-color: var(--primary-dark);
+}
+
+.feature-item h4 {
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.feature-item p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+/* Cuadro de GitHub (Elegante gradiente pastel femenino) */
+.github-deployment-box {
+    background: linear-gradient(135deg, var(--primary), var(--accent-lilac));
+    border-radius: 24px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    box-shadow: 0 15px 35px rgba(255, 143, 163, 0.2);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.github-deployment-box::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: -50px;
+    right: -50px;
+    pointer-events: none;
+}
+
+.github-icon {
+    color: var(--primary-dark);
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.github-deployment-box:hover .github-icon {
+    transform: scale(1.15) rotate(10deg);
+}
+
+.github-text h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.github-text p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Responsivo para proyectos */
+@media (max-width: 850px) {
+    .phase-grid, .phase-grid.solo-media, .interactivity-features {
+        grid-template-columns: 1fr;
+    }
+    .github-deployment-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 2rem;
+    }
+    .github-icon {
+        margin: 0 auto;
+    }
+}
+
+/* Separadores de sección en bitácora web */
+.section-divider {
+    max-width: 1000px;
+    margin: 3rem auto 0 auto;
+    border-bottom: 2px dashed var(--border-color);
+    padding-bottom: 0.75rem;
+}
+
+.section-divider h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+/* Fila para mostrar capturas una al lado de la otra */
+.phase-media-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .phase-media-row {
+        grid-template-columns: 1fr;
